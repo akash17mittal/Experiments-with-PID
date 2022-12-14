@@ -32,11 +32,17 @@ Please complete the following parts in `gem_waypoint_pid/scripts/follow_waypoint
 - define your feedback value for PID control in function `start_drive`
 - Set your own sets of weights for P, I, D terms in `__init__`.
 
+## Note
+
+The `/gem/ackermann_cmd` publishing topic is changed to `/ackermann_cmd`
+
 ## How to run
 
 Assume your ROS workspace locates at `$WS_ROOT`. Please place folder `gem_waypoint_pid` under `$WS_ROOT/src/POLARIS_GEM_e2/polaris_gem_drivers_sim`.
 
-Then `rosrun gem_waypoint_pid follow_waypoints.py`. You should see vehicle move in the middle of the road in the simulator.
+- Start Simulator: `roslaunch gem_launch gem_init.launch world_name:="track1.world"`
+- Move Vehicle: `rosrun gem_waypoint_pid follow_waypoints.py`. You should see vehicle move in the middle of the road in the simulator.
+- Reset: `python3 set_pos.py`
 
 ## What to be submitted
 
