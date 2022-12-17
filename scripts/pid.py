@@ -47,9 +47,6 @@ class PID:
         else:
             de = (feedback_val - self.last_err) / (curr_time - self.last_time)
 
-        # if abs(feedback_val - self.last_err) > 0.5:
-        #     de = 0
-
         self.i_term += (feedback_val * (curr_time - self.last_time))*self.Ki
 
         self.last_err = feedback_val

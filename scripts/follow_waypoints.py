@@ -138,15 +138,8 @@ class WaypointPIDControl(object):
             goal_y_veh_coord = v1[1] * np.cos(cur_yaw) - v1[0] * np.sin(cur_yaw)
 
             orientationOfLineConnectingNextChasePoint = np.arctan2(v1[1], v1[0])
-            L = np.sqrt(np.square(v1).sum())
-
-            alpha = orientationOfLineConnectingNextChasePoint - cur_yaw
-            k = 0.285
-            angle_i = math.atan((2 * k * self.wheelbase * math.sin(alpha)) / L)
-            steering_angle = angle_i * 2
 
             # TODO: define your feedback value
-
             cur_feedback_val = orientationOfLineConnectingNextChasePoint - cur_yaw
 
             steering_angle = self.pid(cur_feedback_val)
