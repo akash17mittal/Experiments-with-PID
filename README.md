@@ -55,3 +55,5 @@ Please submit the following:
 
 - Perfectely tuned PID parameters: **Kp=0.5, Ki=0.01, Kd=0.05**
 - [![Perfectely tuned PID parameters](https://img.youtube.com/vi/4thNQFfdHeM/0.jpg)](https://youtu.be/4thNQFfdHeM)
+- Untuned PID parameters: **Kp=0.2, Ki=0.1, Kd=0.05**
+- [![Untuned PID parameters](https://img.youtube.com/vi/HUa8O11ZCcc/0.jpg)](https://youtu.be/HUa8O11ZCcc)

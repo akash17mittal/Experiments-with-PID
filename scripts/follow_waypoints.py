@@ -43,8 +43,8 @@ class WaypointPIDControl(object):
 
         # TODO: set your own weights for P, I, D terms
         self.pid = PID(
-            Kp=0.5,
-            Ki=0.01,
+            Kp=0.2,
+            Ki=0.1,
             Kd=0.05,
             set_point=0.0,
             sample_time=0.01,
